@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-original =cv2.imread("")
+original =cv2.imread("imag01.jpg")
 cv2.imshow("original",original)
 #显示图片某个颜色通道的图像
 blue =np.zeros_like(original)
@@ -12,7 +12,7 @@ green[:,:,1] = original[:,:,1]
 cv2.imshow('Green',green)
 red =np.zeros_like(original)
 red[:,:,2] =original[:,:,2]
-cv2.imread("red",red)
+cv2.imshow("red",red)
 #图像裁剪
 h,w =original.shape[:2]
 l ,t =int(w/4),int(h/4)
